@@ -1,0 +1,41 @@
+<!-- Demonstration of using Vue js with CDN -->
+
+<html>
+<head>
+    <!--         
+        Imported vue js package using CDN. So now it can be accessed using vue object.
+        So we can create vue instance using it. This vue instance is responsible to bind js code to html code.
+     -->
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <!-- A div element with an id of "app" is added to the body section where Vue.js will bind the data. -->
+    <div id="app">
+        <!-- Mustache suntax -->
+        Hello {{name}}
+    </div>
+</body>
+<script>
+    /* 
+     We create a Vue instance using the createApp method. 
+     The instance has a name property of "app" and a data method that returns an object with a property "name" set to "innominds".
+     This data will be bound to the template using mustache syntax.
+    */
+    const app = Vue.createApp({
+        name: 'app',
+        /*
+        We are exporting this data and we need to bind it in out template.
+        To bind it in template we require a tag. Actually vue need a 
+        */
+        data() {
+            return {
+                name: 'innominds'
+            }
+        }
+    })
+    // The app instance is mounted to the "app" div using the mount method.
+    app.mount('#app')
+</script>
+
+</html>
