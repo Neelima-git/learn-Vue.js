@@ -1,37 +1,39 @@
+<!-- This is a Vue.js single-file component that defines a counter with two buttons to increment or decrement its value. -->
+
 <template>
-  <!-- String Interpolation:
-    This is one way of showing data in template.
-  Class "app" adds bg-pink as defined in styles-->
-  <div class="app">
-    Hello {{ name }}
-  </div>
-  <!-- Directive: v-text
-    This is another way of showing data in the template using directive "v-text" -->
-  <div v-text="name"></div>
-  <!-- uses string interpolation to display the value of the "country" data property. -->
-  <div>{{ country }}</div>
-  <!-- uses the "v-html" directive to display the value of the "country" data property as HTML content. 
-  In this case, the HTML content is bold text "From India" wrapped in the "b" tag.-->
-  <div v-html="country"></div>
+
+  <h1>Count {{ count }}</h1>
+  
+  <!-- These two buttons trigger the add and sub methods when clicked -->
+  <button @click="add">Add</button>
+  <button @click="sub">Sub</button>
 </template>
 
 <script>
+  // The script exports an object contains the name, data and method properties
 export default {
-  // Each component should have a name. First letter should be capital.
-  name: 'App',
-  //This data is similar useState(), we just maintain our components state using useState()
-  //So here we'll maintain local state of data.
-  data(){
-    return{
-      name: 'Neeluu',
-      country: '<b>From India</b>'
-    }
-  }
-}
+  // The name property defines the name of the component
+  name: "App",
+  // The data property defines the state of the component
+  data() {
+    return {
+      // The count variable starts at 0
+      count: 0,
+    };
+  },
+
+  // The methods property defines the behavior of the component
+  methods: {
+    // The add method increments the count variable by 1
+    add() {
+      this.count++;
+    },
+    // The sub method decrements the count variable by 1
+    sub() {
+      this.count--;
+    },
+  },
+};
 </script>
 
-<style>
-  .app{
-    background-color: pink;
-  }
-</style>
+<style></style>
