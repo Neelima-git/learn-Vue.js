@@ -1,39 +1,40 @@
-<!-- This is a Vue.js single-file component that defines a counter with two buttons to increment or decrement its value. -->
-
-<template>
-
-  <h1>Count {{ count }}</h1>
-  
-  <!-- These two buttons trigger the add and sub methods when clicked -->
-  <button @click="add">Add</button>
-  <button @click="sub">Sub</button>
-</template>
+<!-- This is a Vue.js component that allows the user to input two numbers and calculates their sum using a computed property. -->
 
 <script>
-  // The script exports an object contains the name, data and method properties
 export default {
-  // The name property defines the name of the component
-  name: "App",
-  // The data property defines the state of the component
+  // Set the name of the component to "Counter_O"
+  name: "Counter_O",
+  // Define the data properties for the component
   data() {
-    return {
-      // The count variable starts at 0
-      count: 0,
-    };
+    // Initialize the "num1" and "num2" properties to 10 and 20, respectively
+    return { num1: 10, num2: 20 };
   },
-
-  // The methods property defines the behavior of the component
+  // Define the methods for the component
   methods: {
-    // The add method increments the count variable by 1
-    add() {
-      this.count++;
+    // This method doesn't seem to be related to the counter, as it just sets the name property to "value"
+    Add() {
+      this.name = "value";
     },
-    // The sub method decrements the count variable by 1
-    sub() {
-      this.count--;
+  },
+  // Define the computed properties for the component
+  computed: {
+    // Define a computed property called "sum" that calculates the sum of "num1" and "num2"
+    sum() {
+      return this.num1 + this.num2;
     },
   },
 };
 </script>
 
+<!-- Define the template for the component -->
+
+<template>
+  <!-- Define two input fields that allow the user to input numbers, and bind them to the "num1" and "num2" data properties using the v-model directive -->
+  <input type="number" v-model="num1" /> <br />
+  <input type="number" v-model="num2" /> <br />
+  <!-- Define an input field that displays the sum of "num1" and "num2", and bind it to the "sum" computed property using the v-model directive -->
+  <input type="number" v-model="sum" />
+</template>
+
+<!-- Define any custom styles for the component (none are used in this case) -->
 <style></style>

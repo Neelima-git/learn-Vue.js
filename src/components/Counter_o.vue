@@ -1,24 +1,39 @@
+<!-- This is a Vue.js single-file component that defines a counter with two buttons to increment or decrement its value. -->
+
+<template>
+
+  <h1>Count {{ count }}</h1>
+  
+  <!-- These two buttons trigger the add and sub methods when clicked -->
+  <button @click="add">Add</button>
+  <button @click="sub">Sub</button>
+</template>
+
 <script>
+  // The script exports an object contains the name, data and method properties
 export default {
-  name: "Counter_O",
+  // The name property defines the name of the component
+  name: "COunter_o",
+  // The data property defines the state of the component
   data() {
-    return { count: 0 };
+    return {
+      // The count variable starts at 0
+      count: 0,
+    };
   },
+
+  // The methods property defines the behavior of the component
   methods: {
-    Add() {
+    // The add method increments the count variable by 1
+    add() {
       this.count++;
     },
-    Sub() {
+    // The sub method decrements the count variable by 1
+    sub() {
       this.count--;
     },
   },
 };
 </script>
-
-<template>
-  <h1>{{ count }}</h1>
-  <button @click="Add">Add</button>
-  <button @click="Sub">Sub</button>
-</template>
 
 <style></style>
