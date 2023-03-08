@@ -1,19 +1,19 @@
 <template>
-  <h3>Parent component</h3>
-  <ChildComponent/>
+  <div id="app">
+    <h3>Viewing in app</h3>
+      <PropsDemo/>
+  </div>
 </template>
 
 <script>
-
-// import DataBinding from './components/DataBinding.vue';
-import ChildComponent from './components/ComponentRegistration.vue'
+// import PropsComponent from "./components/PropsDemoChild.vue";
+import PropsDemo from './components/PropsDemoParent.vue'
 
 export default {
+  name: "App",
   components: {
-    ChildComponent
-  }
-}
-</script>ComponentRegistration
-<style>
-
-</style>
+    PropsDemo
+  },
+};
+</script>
+<style></style>
