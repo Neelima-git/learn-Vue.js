@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <h3>Viewing in app</h3>
-      <PropsDemo/>
+    <h3>Form in Vue js</h3>
+      <Login/>
   </div>
 </template>
 
 <script>
-// import PropsComponent from "./components/PropsDemoChild.vue";
-import PropsDemo from './components/PropsDemoParent.vue'
+import Login from './components/form/Login.vue'
 
 export default {
   name: "App",
   components: {
-    PropsDemo
+    Login
   },
 };
 </script>
