@@ -1,20 +1,28 @@
 <template>
   <div class="form">
-    <input
-      type="text"
-      name="username"
-      id="username"
-      placeholder="Enter username "
-      v-model="loginForm.username"
-    />
-    <input
-      type="password"
-      name="password"
-      id="password"
-      placeholder="Enter password "
-      v-model="loginForm.password"
-    />
-    <button @click="getLogin">Login</button>
+    <p v-if="loginForm.error.length">
+        <b>Please correct following errors: </b>
+        <ul>
+            <li v-for="e in loginForm.error" v-bind:key="e.id">{{ e }}</li>
+        </ul>
+    </p>
+    <form @submit="login">
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter username "
+        v-model="loginForm.username"
+      />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter password "
+        v-model="loginForm.password"
+      />
+      <button type="submit">Login</button>
+    </form>
   </div>
 </template>
 
@@ -24,14 +32,27 @@ export default {
   data() {
     return {
       loginForm: {
+        error: [],
         username: null,
         password: null,
       },
     };
   },
   methods: {
-    getLogin() {
-      console.log("getLogin called", this.loginForm);
+    login(e) {
+        e.preventDefault();
+      if (this.loginForm.username && this.loginForm.password) {
+        console.log("Login function called");
+      }
+    //   this.error = [];
+    this.loginForm.error=[]
+      if (!this.loginForm.username) {
+        this.loginForm.error.push("Username is required");
+      }
+      if (!this.loginForm.password) {
+        this.loginForm.error.push("Password is required");
+      }
+      console.warn("error", this.loginForm.error);
     },
   },
 };
