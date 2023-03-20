@@ -1,0 +1,12 @@
+{
+    "posts": [
+        {
+            "chocolate": "Dairy Milk Roasted almonds",
+            "price": "30"
+        },
+        {
+            "chocolate": "Milky bar",
+            "price": "20"
+        }
+    ]
+}
