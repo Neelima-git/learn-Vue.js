@@ -4,6 +4,7 @@
     <!-- <EmployeeList/> -->
     <!-- <Post/> -->
     <Computed/>
+    <Watcher/>
   </div>
 </template>
 
@@ -11,13 +12,15 @@
 // import EmployeeList from './components/api/EmployeeList.vue';
 // import Post from './components/api/PostData.vue'
 import Computed from './components/computed/Computed.vue';
+import Watcher from './components/watchers/Watcher.vue';
 
 export default {
   name: "App",
   components: {
     // EmployeeList,
     // Post
-    Computed
+    Computed,
+    Watcher
   },
 };
 </script>
