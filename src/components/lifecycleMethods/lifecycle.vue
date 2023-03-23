@@ -11,9 +11,9 @@
   </template>
   
   <script>
-  import create from './components/lifecycleMethods/create.vue'
-  import mount from './components/lifecycleMethods/mount.vue'
-  import destroy from './components/lifecycleMethods/destroy.vue'
+  import create from './create.vue'
+  import mount from './mount.vue'
+  import destroy from './destroy.vue'
   
   
   export default {
