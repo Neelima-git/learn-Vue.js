@@ -1,10 +1,8 @@
-<!-- Watchers are the observers of the property which continuously observe the value of the property  -->
-
 <template>
     <h2>Watchers</h2>
-    <h1>{{ count }}</h1>
-    <button v-on:click="count=count+1">+</button>
-    <button v-on:click="count=count-1">-</button>
+    <h1>{{ count }}</h1> <!-- Display the current value of "count" -->
+    <button v-on:click="count=count+1">+</button> <!-- Increment "count" when the button is clicked -->
+    <button v-on:click="count=count-1">-</button> <!-- Decrement "count" when the button is clicked -->
 </template>
 
 <script>
@@ -12,13 +10,13 @@ export default {
     name: "WatchersComponent",
     data(){
         return{
-            count: 0
+            count: 0 // Set the initial value of "count" to 0
         }
     },
     watch: {
-        count(val, prev){
-            if(val>10 && val>prev){
-                alert("stop counting")
+        count(val, prev){ // Watch changes to "count"
+            if(val>10 && val>prev){ // If the new value of "count" is greater than 10 and is also greater than the previous value of "count"
+                alert("stop counting") // Show an alert message
             }
         }
     }
