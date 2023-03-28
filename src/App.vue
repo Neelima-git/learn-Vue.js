@@ -6,6 +6,7 @@
     <!-- <Computed/>
     <Watcher/> -->
     <DemoSlot/>
+    <TeleportDemo/>
     <!-- <lifecycle/> -->
   </div>
 </template>
@@ -17,6 +18,7 @@
 // import Computed from './components/computed/Computed.vue';
 // import Watcher from './components/watchers/Watcher.vue';
 import DemoSlot from './components/slots/SlotParent.vue';
+import TeleportDemo from 'vue';
 
 export default {
   name: "App",
@@ -26,7 +28,8 @@ export default {
     // lifecycle
     // Computed,
     // Watcher,
-    DemoSlot
+    DemoSlot,
+    TeleportDemo
   },
 };
 </script>

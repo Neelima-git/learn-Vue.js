@@ -1,6 +1,6 @@
 <template>
   <h1>Teleport components</h1>
-  <teleport to="#footer"> 
+  <teleport to="footer"> 
     <Footer />
   </teleport>
 </template>
