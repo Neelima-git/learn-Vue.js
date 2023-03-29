@@ -13,7 +13,7 @@
   <script>
   import create from './create.vue'
   import mount from './mount.vue'
-  import destroy from './destroy.vue'
+  import destroy from './unmount.vue'
   
   
   export default {

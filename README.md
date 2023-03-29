@@ -1,4 +1,7 @@
-# first-vue-project
+# Learn Vue.js
+
+## What is Vue.js?
+![Vue Introduction](./src/assets/vue1.png)
 
 ## Project setup
 ```

@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <h2>Fetch data with api</h2>
+    <h2>App Component</h2>
     <!-- <EmployeeList/> -->
     <!-- <Post/> -->
     <!-- <Computed/>
     <Watcher/> -->
-    <DemoSlot/>
-    <TeleportDemo/>
+    <!-- <DemoSlot/>
+    <TeleportDemo/> -->
     <!-- <lifecycle/> -->
+
+    <!-- Demo for routers  -->
+    <RoutesDemo/>
   </div>
 </template>
 
@@ -17,8 +20,9 @@
 // import lifecycle from './components/lifecycleMethods/lifecycle.vue';
 // import Computed from './components/computed/Computed.vue';
 // import Watcher from './components/watchers/Watcher.vue';
-import DemoSlot from './components/slots/SlotParent.vue';
-import TeleportDemo from 'vue';
+// import DemoSlot from './components/slots/SlotParent.vue';
+// import TeleportDemo from 'vue';
+import RoutesDemo from './components/routing/RoutesDemo.vue'
 
 export default {
   name: "App",
@@ -28,8 +32,9 @@ export default {
     // lifecycle
     // Computed,
     // Watcher,
-    DemoSlot,
-    TeleportDemo
+    // DemoSlot,
+    // TeleportDemo
+    RoutesDemo
   },
 };
 </script>
