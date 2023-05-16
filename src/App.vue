@@ -11,6 +11,7 @@
 
     <!-- Demo for routers  -->
     <RoutesDemo/>
+    <!-- <CounterDemo/> -->
   </div>
 </template>
 
@@ -22,6 +23,8 @@
 // import Watcher from './components/watchers/Watcher.vue';
 // import DemoSlot from './components/slots/SlotParent.vue';
 // import TeleportDemo from 'vue';
+
+// import CounterDemo from './components/Counter_o.vue';
 import RoutesDemo from './components/routing/RoutesDemo.vue'
 
 export default {
@@ -35,6 +38,7 @@ export default {
     // DemoSlot,
     // TeleportDemo
     RoutesDemo
+    // CounterDemo
   },
 };
 </script>

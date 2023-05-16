@@ -9,13 +9,6 @@ export default {
     // Initialize the "num1" and "num2" properties to 10 and 20, respectively
     return { num1: 10, num2: 20 };
   },
-  // Define the methods for the component
-  methods: {
-    // This method doesn't seem to be related to the counter, as it just sets the name property to "value"
-    Add() {
-      this.name = "value";
-    },
-  },
   // Define the computed properties for the component
   computed: {
     // Define a computed property called "sum" that calculates the sum of "num1" and "num2"

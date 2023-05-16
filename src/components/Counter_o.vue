@@ -13,7 +13,7 @@
   // The script exports an object contains the name, data and method properties
 export default {
   // The name property defines the name of the component
-  name: "COunter_o",
+  name: "Counter_o",
   // The data property defines the state of the component
   data() {
     return {
